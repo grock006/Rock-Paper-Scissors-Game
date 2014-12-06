@@ -40,10 +40,11 @@ function compareOptions(){
 	var computerPick = document.getElementById('computer_pick');
 	var picture = document.getElementById('result');
 	var resultText = document.getElementById('result_text');
+	var buttonChange = document.getElementById('try_again');
+	buttonChange.color = "orange";
 
 	//var testString = document.getElementById('computer_pick');
 	//testString.innerHTML = "Hello World";
-
 
 	if(yourOption == "Rock" && computerOption == "Scissors"){
 		console.log("You win!");
@@ -51,6 +52,7 @@ function compareOptions(){
 		computerPick.innerHTML = "SCISSORS";
 		picture.src = "img/thumbsup.jpeg";
 		resultText.innerHTML = "You win!";
+		buttonChange.color = "yellow";
  	}
 	else if(yourOption == "Rock" && computerOption == "Paper"){
 		console.log("You lose");
@@ -110,6 +112,15 @@ function compareOptions(){
 		picture.src = "img/thumbsdown.jpg";
 		resultText.innerHTML = "You lose.";
 	}
+	else{
+		alert("You must pick Rock, Paper or Scissors!")
+		window.location.reload()
+	}
+
+
+	// if(yourOption == true && computerOption == true){
+	// button.display = "block";
+ //    }
 
 };
 

@@ -30,13 +30,25 @@ img {
 	margin-left: 50px;
 }
 
+button {
+	background-color: black;
+	color: white;
+	padding: 20px;
+	margin-left: 50px;
+}
+
+#try_again {
+	display: block;
+	color: white;
+}
+
 #result_text {
 	text-transform: uppercase;
 	color: red;
 }
 
 #result{
-	width: 25%;
+	width: 15%;
 }
 
 body {
