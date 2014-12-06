@@ -1,4 +1,8 @@
 console.log("hello world")
+var string = "hello word"
+console.log(string)
+var capitalize = string.charAt(0).toUpperCase() + string.substring(1);
+console.log(capitalize)
 
 //var options = ["Rock", "Paper", "Scissors"]
 
@@ -33,15 +37,19 @@ console.log("hello world")
 function compareOptions(){
 
 	var options = ["Rock", "Paper", "Scissors"]
-	var yourOption = prompt("Pick Rock, Paper or Scissors");
-	var computerOption = options[Math.floor(Math.random() * options.length)];
+	var string = prompt("Pick Rock, Paper or Scissors");
+	var yourOption = string.charAt(0).toUpperCase() + string.substring(1);
 
+	var computerOption = options[Math.floor(Math.random() * options.length)];
 	var yourPick = document.getElementById('your_pick');
 	var computerPick = document.getElementById('computer_pick');
 	var picture = document.getElementById('result');
 	var resultText = document.getElementById('result_text');
-	var buttonChange = document.getElementById('try_again');
-	buttonChange.color = "orange";
+
+	var showButton = document.getElementById('hidden');
+	showButton.style.display = "block";
+
+	//var buttonChange = document.getElementById('try_again');
 
 	//var testString = document.getElementById('computer_pick');
 	//testString.innerHTML = "Hello World";
@@ -52,7 +60,7 @@ function compareOptions(){
 		computerPick.innerHTML = "SCISSORS";
 		picture.src = "img/thumbsup.jpeg";
 		resultText.innerHTML = "You win!";
-		buttonChange.color = "yellow";
+		//buttonChange.color = "yellow";
  	}
 	else if(yourOption == "Rock" && computerOption == "Paper"){
 		console.log("You lose");

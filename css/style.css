@@ -3,6 +3,7 @@ h1 {
 	font-size: 80px;
 	font-family: Stencil;
 	margin-left: 50px;
+	margin-bottom: 10px;
 }
 
 h3 {
@@ -42,9 +43,19 @@ button {
 	color: white;
 }
 
+#hidden {
+	display: none;
+}
+
 #result_text {
 	text-transform: uppercase;
-	color: red;
+	margin-top: 0px;
+	color: black;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 30px;
+	text-decoration: none;
+	padding-left: 190px;
 }
 
 #result{
