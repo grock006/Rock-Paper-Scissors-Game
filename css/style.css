@@ -2,21 +2,41 @@ h1 {
 	color: red;
 	font-size: 80px;
 	font-family: Stencil;
-}
-
-h2 {
-	font-size: 50px;
-	font-family: Garamond;
 	margin-left: 50px;
 }
 
-#your_pick {
+h3 {
+	font-size: 20px;
+	font-family: Garamond;
+	margin-left: 50px;
+	margin-bottom: 5px;
+	text-decoration: underline;
 	color: black;
+}
+
+#your_pick {
+	color: red;
+	text-decoration: none;
+	font-weight: bolder;
+}
+
+#computer_pick {
+	color: red;
+	text-decoration: none;
+	font-weight: bolder;
+}
+
+img {
+	margin-left: 50px;
+}
+
+#result_text {
+	text-transform: uppercase;
+	color: red;
 }
 
 #result{
 	width: 25%;
-	border: 5px solid black;
 }
 
 body {

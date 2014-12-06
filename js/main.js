@@ -38,8 +38,8 @@ function compareOptions(){
 
 	var yourPick = document.getElementById('your_pick');
 	var computerPick = document.getElementById('computer_pick');
-	var computerString = computerOption.toString();
 	var picture = document.getElementById('result');
+	var resultText = document.getElementById('result_text');
 
 	//var testString = document.getElementById('computer_pick');
 	//testString.innerHTML = "Hello World";
@@ -47,50 +47,68 @@ function compareOptions(){
 
 	if(yourOption == "Rock" && computerOption == "Scissors"){
 		console.log("You win!");
-		yourPick.innerHTML = "You win";
+		yourPick.innerHTML = "ROCK";
+		computerPick.innerHTML = "SCISSORS";
 		picture.src = "img/thumbsup.jpeg";
+		resultText.innerHTML = "You win!";
  	}
 	else if(yourOption == "Rock" && computerOption == "Paper"){
 		console.log("You lose");
-		yourPick.innerHTML = "You lose";
+		yourPick.innerHTML = "ROCK";
+		computerPick.innerHTML = "PAPER";
 		picture.src = "img/thumbsdown.jpg";
+		resultText.innerHTML = "You lose.";
 	}
 	else if(yourOption == "Rock" && computerOption == "Rock"){
 		console.log("You tie, try again.");
-		yourPick.innerHTML = "You tie, try again";
+		yourPick.innerHTML = "ROCK";
+		computerPick.innerHTML = "ROCK";
 		picture.src = "img/tie.jpg";
+		resultText.innerHTML = "You tie, try again.";
 	}
 
 	else if(yourOption == "Paper" && computerOption == "Scissors"){
 		console.log("You lose");
-		yourPick.innerHTML = "You lose";
+		yourPick.innerHTML = "PAPER";
+		computerPick.innerHTML = "SCISSORS";
 		picture.src = "img/thumbsdown.jpg";
+		resultText.innerHTML = "You lose.";
 	}
 	else if(yourOption == "Paper" && computerOption == "Paper"){
 		console.log("You tie");
-		yourPick.innerHTML = "You tie, try again";
+		yourPick.innerHTML = "PAPER";
+		computerPick.innerHTML = "PAPER";
 		picture.src = "img/tie.jpg";
+		resultText.innerHTML = "You tie, try again.";
 	}
 	else if(yourOption == "Paper" && computerOption == "Rock"){
 		console.log("You win!");
-		yourPick.innerHTML = "You win";
+		yourPick.innerHTML = "PAPER";
+		computerPick.innerHTML = "ROCK";
 		picture.src = "img/thumbsup.jpeg";
+		resultText.innerHTML = "You win!";
 	}
 
 	else if(yourOption == "Scissors" && computerOption == "Scissors"){
 		console.log("You tie");
-		yourPick.innerHTML = "You tie, try again";
+		yourPick.innerHTML = "SCISSORS";
+		computerPick.innerHTML = "SCISSORS";
 		picture.src = "img/tie.jpg";
+		resultText.innerHTML = "You tie, try again.";
 	}
 	else if(yourOption == "Scissors" && computerOption == "Paper"){
 		console.log("You win");
-		yourPick.innerHTML = "You win";
+		yourPick.innerHTML = "SCISSORS";
+		computerPick.innerHTML = "PAPER";
 		picture.src = "img/thumbsup.jpeg";
+		resultText.innerHTML = "You win!";
 	}
 	else if(yourOption == "Scissors" && computerOption == "Rock"){
 		console.log("You lose");
-		yourPick.innerHTML = "You lose";
+		yourPick.innerHTML = "SCISSORS";
+		computerPick.innerHTML = "ROCK";
 		picture.src = "img/thumbsdown.jpg";
+		resultText.innerHTML = "You lose.";
 	}
 
 };
