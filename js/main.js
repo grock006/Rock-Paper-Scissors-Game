@@ -1,45 +1,12 @@
-console.log("hello world")
-var string = "hello word"
-console.log(string)
-var capitalize = string.charAt(0).toUpperCase() + string.substring(1);
-console.log(capitalize)
 
-//var options = ["Rock", "Paper", "Scissors"]
-
-//Choose Your Option ("Rock", "Paper" or "Scissor")
-// var yourOption = prompt("Pick Rock Paper of Scissor")
-
-//var yourOption = prompt("Pick Rock, Paper or Scissors")
-
-// Computer Picks Option at Random 
-// var computerOption = options.rand
-//var computerOption = options[Math.floor(Math.random() * options.length)];
-
-//var computerOption = options[Math.floor(Math.random() * options.length)];
-
-//need a function to compare yourOption to computerOption
-//function compareOptions
-//If else Statement Determines Who Wins
-//If Player #1 picks rock and Computer picks scissors
-//then scissors > rock
-// if( yourOption == "Rock" && computerOption == "Scissor"){
-//	console.log("You win!")};
-
-//Need to print the winning statement to an HTML element ID
-// your_pick
-// computer_pick
-// var yourPick = document.getElementById('your_pick');
-// yourPick.innerHTML("you win!")
-
-//var yourPick = document.getElementById('your_pick');
-//yourPick.style.color = "Red";
 
 function compareOptions(){
 
 	var options = ["Rock", "Paper", "Scissors"]
-	var string = prompt("Pick Rock, Paper or Scissors");
+	
+	//var string = prompt("Pick Rock, Paper or Scissors");
+	
 	var yourOption = string.charAt(0).toUpperCase() + string.substring(1);
-
 	var computerOption = options[Math.floor(Math.random() * options.length)];
 	var yourPick = document.getElementById('your_pick');
 	var computerPick = document.getElementById('computer_pick');
@@ -48,11 +15,6 @@ function compareOptions(){
 
 	var showButton = document.getElementById('hidden');
 	showButton.style.display = "inline";
-
-	//var buttonChange = document.getElementById('try_again');
-
-	//var testString = document.getElementById('computer_pick');
-	//testString.innerHTML = "Hello World";
 
 
 		var yourPicture = document.getElementById('your_picture');
@@ -65,19 +27,19 @@ function compareOptions(){
 				computerPicture.style.width = "35%"
 		}
 
-		//function counter, need to set up yourScore and computerScore and logic
-		//if yourOption == "Rock" && computerOption = "Scissors"
-		//   yourScore.innerHTML = 1
-		// need to set up a loop i++, if this then add 1 to yourscore
-		// function counter(){
-		//	var player = 0;
-		//	var computer = 0
-		//	var draw = 0
-		//	if(yourOption == "Rock" && computerOption = "Scissors"){
-		//	   player += 1
-		//		document.getElementbyId("player").innerHTML = player
- 		//}		
-		//}
+		var player = 0;
+		var computer = 0;
+		var playerScore = document.getElementById("player_score");
+		var computerScore = document.getElementById("computer_score");
+		playerScore.innerHTML = player;
+		computerScore.innerHTML = computer;
+		
+		function counter(){
+			if(yourOption == "Rock"){
+			   player += 1
+			   playerScore.innerHTML = player;
+			   }		
+		}
 
 
 	if(yourOption == "Rock" && computerOption == "Scissors"){
@@ -173,13 +135,10 @@ function compareOptions(){
 	}
 
 	changeRock();
-	keyRefresh();
-	// if(yourOption == true && computerOption == true){
-	// button.display = "block";
- //    }
+	counter();
 
 };
-//Run function
+
 
 window.onload  = function () {
  compareOptions();

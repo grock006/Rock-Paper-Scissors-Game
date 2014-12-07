@@ -93,6 +93,11 @@ button {
 	text-decoration: none;
 	text-align: center;
 }
+.counter {
+	margin: 0 auto;
+	text-align: center;
+}
+
 
 #result{
 	width: 15%;
