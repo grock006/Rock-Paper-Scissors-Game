@@ -58,6 +58,27 @@ function compareOptions(){
 		var yourPicture = document.getElementById('your_picture');
 		var computerPicture = document.getElementById('computer_picture');
 
+		function changeRock() {
+			if(yourOption == "Rock")
+				yourPicture.style.width = "35%";
+			if(computerOption == "Rock")
+				computerPicture.style.width = "35%"
+		}
+
+		//function counter, need to set up yourScore and computerScore and logic
+		//if yourOption == "Rock" && computerOption = "Scissors"
+		//   yourScore.innerHTML = 1
+		// need to set up a loop i++, if this then add 1 to yourscore
+		// function counter(){
+		//	var player = 0;
+		//	var computer = 0
+		//	var draw = 0
+		//	if(yourOption == "Rock" && computerOption = "Scissors"){
+		//	   player += 1
+		//		document.getElementbyId("player").innerHTML = player
+ 		//}		
+		//}
+
 
 	if(yourOption == "Rock" && computerOption == "Scissors"){
 		console.log("You win!");
@@ -65,7 +86,7 @@ function compareOptions(){
 		computerPick.innerHTML = "SCISSORS";
 		//picture.src = "img/thumbsup.jpeg";
 		resultText.innerHTML = "You win!";
-		yourPicture.src = "img/rock.png"
+		yourPicture.src = "img/rock.png"		
 		computerPicture.src = "img/scissors.png"
  	}
 	else if(yourOption == "Rock" && computerOption == "Paper"){
@@ -83,8 +104,8 @@ function compareOptions(){
 		computerPick.innerHTML = "ROCK";
 		//picture.src = "img/tie.jpg";
 		resultText.innerHTML = "You tie, try again.";
-		yourPicture.src = "img/rock.png"
-		computerPicture.src = "img/rock.png"
+		yourPicture.src = "img/rock.png";
+		computerPicture.src = "img/rock.png";
 	}
 
 	else if(yourOption == "Paper" && computerOption == "Scissors"){
@@ -151,16 +172,17 @@ function compareOptions(){
 		window.location.reload()
 	}
 
-
+	changeRock();
+	keyRefresh();
 	// if(yourOption == true && computerOption == true){
 	// button.display = "block";
  //    }
 
 };
-
-
 //Run function
 
 window.onload  = function () {
  compareOptions();
  }
+
+
