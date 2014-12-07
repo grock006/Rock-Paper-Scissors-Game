@@ -1,4 +1,4 @@
-console.log("hello world")
+console.log("hello earl")
 var string = "hello word"
 console.log(string)
 var capitalize = string.charAt(0).toUpperCase() + string.substring(1);
