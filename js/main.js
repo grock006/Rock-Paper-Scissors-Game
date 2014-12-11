@@ -2,11 +2,35 @@
 
 function compareOptions(){
 
-	var options = ["Rock", "Paper", "Scissors"]
+	var yourOption = null;
+	var rock = document.getElementById('rock');
+	var paper = document.getElementById('paper');
+	var scissors = document.getElementById('scissors');
+	var testbutton = document.getElementById('test_button');
+	//var yourOption = ["Rock", "Paper", "Scissor"];
+
+	rock.onclick = function (){
+		console.log("You clicked the test button");
+		testbutton.style.color = 'blue';
+		yourOption = "Rock";
+		console.log(yourOption);
+	}
 	
+    // throw = function(play){
+    //     this.play = play
+    //	   this.winorlose = function(){   }
+    // if else			
+    // }
+
+    // onclick="throw('Rock')";
+
 	//var string = prompt("Pick Rock, Paper or Scissors");
 	
-	var yourOption = string.charAt(0).toUpperCase() + string.substring(1);
+	//var yourOption = string.charAt(0).toUpperCase() + string.substring(1);
+	
+	var options = ["Rock", "Paper", "Scissors"];
+	//var yourOption = options[0];
+
 	var computerOption = options[Math.floor(Math.random() * options.length)];
 	var yourPick = document.getElementById('your_pick');
 	var computerPick = document.getElementById('computer_pick');
@@ -20,12 +44,13 @@ function compareOptions(){
 		var yourPicture = document.getElementById('your_picture');
 		var computerPicture = document.getElementById('computer_picture');
 
-		function changeRock() {
-			if(yourOption == "Rock")
-				yourPicture.style.width = "35%";
-			if(computerOption == "Rock")
-				computerPicture.style.width = "35%"
-		}
+		// function changeRock() {
+		// 	console.log(yourOption);
+		// 	if(yourOption == "Rock")			
+		// 		yourPicture.style.width = "35%";
+		// 	if(computerOption == "Rock")
+		// 		computerPicture.style.width = "35%"
+		// }
 
 		var player = 0;
 		var computer = 0;
@@ -34,13 +59,14 @@ function compareOptions(){
 		playerScore.innerHTML = player;
 		computerScore.innerHTML = computer;
 		
-		function counter(){
-			if(yourOption == "Rock"){
-			   player += 1
-			   playerScore.innerHTML = player;
-			   }		
-		}
+		// function counter(){
+		// 	if(yourOption == "Rock"){
+		// 	   player += 1
+		// 	   playerScore.innerHTML = player;
+		// 	   }		
+		// }
 
+	
 
 	if(yourOption == "Rock" && computerOption == "Scissors"){
 		console.log("You win!");
@@ -129,13 +155,13 @@ function compareOptions(){
 		yourPicture.src = "img/scissors.png"
 		computerPicture.src = "img/rock.png"
 	}
-	else{
-		alert("You must pick Rock, Paper or Scissors!")
-		window.location.reload()
-	}
+	// // else{
+	// // 	alert("You must pick Rock, Paper or Scissors!")
+	// // 	window.location.reload()
+	// }
 
-	changeRock();
-	counter();
+	//changeRock();
+	//counter();
 
 };
 

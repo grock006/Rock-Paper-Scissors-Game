@@ -3,28 +3,38 @@
 <head>
    <title>Rock Paper Scissors Game</title>
    <link rel="stylesheet" type="text/css" href="css/style.css">
-   <script type="text/javascript" src="js/main.js"></script>
+   <script type="text/javascript" src="js/second.js"></script>
 </head>
 
 <body>
   <h1 class="left">Rock Paper Scissors</h1>
 
-  <button id="hidden" onClick="window.location.href=window.location.href">THROW AGAIN</button>
-
   <div class="clear"></div>
 
   <div class="inner_body">
 
-  <div class="left">
-  <h3><strong>You Throw:<strong></h3>
-  <h3 id="your_pick"></h3>
-  <img id="your_picture">
+  <h2 id="welcome_name"></h2>
+  <h2><strong>CHOOSE YOUR THROW:</strong></h>
+  <br>
+    <div class="upper_body">
+    <img src="img/rock.png" alt="rock" id="rock">
+    <img src="img/paper.png" alt="paper" id="paper">
+    <img src="img/scissors.png" alt="scissors" id="scissors">
+
   </div>
+
+  <div class ="lower_body">
+
+    <div class="left">
+      <h3><strong>YOU THROW:<strong></h3>
+      <h3 id="your_pick"></h3>
+      <img id="your_picture">
+    </div>
   
   <div class="right text_right">
-  <h3><strong>Your Computer Overlord Throws:</strong></h3>
-  <h3 id="computer_pick"></h3>
-  <img id="computer_picture">
+    <h3><strong>YOUR COMPUTER OVERLORD THROWS</strong></h3>
+    <h3 id="computer_pick"></h3>
+    <img id="computer_picture">
 </div>
 
   <br>
@@ -35,13 +45,15 @@
   <h3 id="result_text"></h3>
 
   <div class="counter">
-    <h4>Player:</h4>
-    <h4 id="player_score"></h4>
-    <h4>Computer:</h4>
-    <h4 id="computer_score"></h4>
+    <!--put these below on the same lines-->
+    <p><h4 id="player_name"></h4><h4 id="player_score"></h4></p>
+    <hr>
+    <p><h4>COMPUTER OVERLORD:</h4><h4 id="computer_score"></h4></p>
   </div>
 
-  <div>
+  </div>
+
+  </div>
 
 </body>
 
